@@ -24,7 +24,7 @@ public class GetStatusReport extends HttpServlet
 		BiolockJSim bSim = BiolockJSim.runMap.get(id);
 		
 		PrintWriter out = resp.getWriter();
-		out.write("{");
+		out.write("{\"NodeStats\" : [");
 		
 		for(int x=0; x < bSim.getNumNodes(); x++)
 		{
@@ -44,7 +44,7 @@ public class GetStatusReport extends HttpServlet
 				out.write(",\n");
 		}
 		
-		out.write("}\n");
+		out.write("]}\n");
 		out.flush();  out.close();
 	}
 }
