@@ -11,6 +11,16 @@
         <servlet-name>KickOffBiolockJSim</servlet-name>
         <url-pattern>/servlets/servlet/KickOffBiolockJSim</url-pattern>
     </servlet-mapping>
+    
+     <servlet>
+        <servlet-name>GetStatusReport</servlet-name>
+        <servlet-class>biolockJSim.GetStatusReport</servlet-class>
+    </servlet>
+	
+<servlet-mapping>
+        <servlet-name>GetStatusReport</servlet-name>
+        <url-pattern>/servlets/servlet/GetStatusReport</url-pattern>
+    </servlet-mapping>
   
   
   <welcome-file-list>
