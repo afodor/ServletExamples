@@ -22,6 +22,7 @@ public class KickOffBiolockJSim extends HttpServlet
 		
 		int runID = idCounter.getAndIncrement() ;
 		BiolockJSim bSim = new BiolockJSim(runID, 100);
+		bSim.startUpdates();
 		BiolockJSim.runMap.put(runID, bSim);
 		
 		PrintWriter out = resp.getWriter();

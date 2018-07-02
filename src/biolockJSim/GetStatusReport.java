@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+// for example
+//http://127.0.0.1:8080/ServletExamples/servlets/servlet/GetStatusReport?JOB_ID=0
 public class GetStatusReport extends HttpServlet
 {
 	public static final String JOB_ID = "JOB_ID";
@@ -20,6 +22,7 @@ public class GetStatusReport extends HttpServlet
 		BiolockJSim bSim = BiolockJSim.runMap.get(id);
 		
 		PrintWriter out = resp.getWriter();
+		out.write("{");
 		
 		for(int x=0; x < bSim.getNumNodes(); x++)
 		{
@@ -39,7 +42,7 @@ public class GetStatusReport extends HttpServlet
 				out.write(",\n");
 		}
 		
-		
+		out.write("}\n");
 		out.flush();  out.close();
 	}
 }
