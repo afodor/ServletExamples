@@ -32,11 +32,11 @@ public class GetStatusReport extends HttpServlet
 			
 			out.write("{\n");
 			
-			out.write("node : " + bNode.getName() + ", \n");
+			out.write("\"node\" : " + "\"" + bNode.getName() + "\", \n");
 
-			out.write("jobName : " + bNode.getName() + ", \n");
+			out.write("\"jobName\" : " + "\"" +bNode.getName() + "\", \n");
 			
-			out.write("progress : " + bNode.getProgress() + " \n");
+			out.write("\"progress\" : " + "\"" + bNode.getProgress() + "\" \n");
 			
 			out.write("}\n");
 			
