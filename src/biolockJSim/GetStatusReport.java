@@ -17,6 +17,8 @@ public class GetStatusReport extends HttpServlet
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
 	{
+		resp.addHeader("Access-Control-Allow-Origin", "*");
+		
 		int id = Integer.parseInt(req.getParameter(JOB_ID));
 		
 		BiolockJSim bSim = BiolockJSim.runMap.get(id);
