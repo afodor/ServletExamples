@@ -19,9 +19,16 @@ public class KickOffBiolockJSim extends HttpServlet
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
 	{
 		resp.setContentType("text/html");
+		
+		int runID = idCounter.getAndIncrement() ;
+		BiolockJSim bSim = new BiolockJSim(runID, 100);
+		BiolockJSim.runMap.put(runID, bSim);
+		
 		PrintWriter out = resp.getWriter();
 		
-		out.write("{jobID : " + idCounter.getAndIncrement() + "}\n");
+		out.write("{jobID : " + runID + "}\n");
+		
+		
 		
 		out.flush();  out.close();
 	}
