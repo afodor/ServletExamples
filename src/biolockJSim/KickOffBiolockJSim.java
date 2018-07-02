@@ -31,7 +31,7 @@ public class KickOffBiolockJSim extends HttpServlet
 		
 		PrintWriter out = resp.getWriter();
 		
-		out.write("{jobID : " + runID + "}\n");
+		out.write("{\"jobID\" : " + "\"" + runID + "\"}\n");
 		out.flush();  out.close();
 	}
 }
