@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+// for example http://127.0.0.1:8080/ServletExamples/servlets/servlet/KickOffBiolockJSim
 public class KickOffBiolockJSim extends HttpServlet
 {
 
